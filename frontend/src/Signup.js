@@ -21,16 +21,31 @@ function Signup() {
     }
   }
 
+  const [phone, setPhone] = useState("")
+
   return (
     <div className="auth-container">
       <h2>Sign Up</h2>
       <form onSubmit={handleSignup} className="auth-form">
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <input
+          type="tel"
+          placeholder="Phone Number"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
           required
         />
         <button type="submit">Sign Up</button>

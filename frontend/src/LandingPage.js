@@ -33,10 +33,10 @@ function LandingPage() {
               <Link to="/signup" className="btn btn-primary">Start Adopting</Link>
               <Link to="/login" className="btn btn-secondary">Login</Link>
             </div>
-          </div>
+          {/* </div>
           <div className="hero-image">
             <img src="/placeholder.svg?height=400&width=500" alt="Happy family with adopted pets" />
-          </div>
+          </div> */}
         </div>
       </section>
 
