@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { onAuthStateChanged, signOut } from "firebase/auth"
 import { auth } from "./firebase"
 import "./App.css"
+import apiService from './services/api'
 
 function LandingPage() {
   const [user, setUser] = useState(null)

@@ -1,7 +1,9 @@
 // src/App.js
+import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Layout from "./Layout"
 import LandingPage from "./LandingPage"
+import "./App.css"
 import Login from "./Login"
 import Signup from "./Signup"
 import PetSearch from "./PetSearch"
