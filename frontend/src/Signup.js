@@ -1,4 +1,3 @@
-// src/Signup.js
 import { useState } from "react"
 import { createUserWithEmailAndPassword } from "firebase/auth"
 import { auth } from "./firebase"
@@ -8,6 +7,9 @@ import "./Auth.css"
 function Signup() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [phone, setPhone] = useState("")
+  const [role, setRole] = useState("Pet Owner")
+  const [showRoles, setShowRoles] = useState(false)
   const navigate = useNavigate()
 
   const handleSignup = async (e) => {
@@ -20,8 +22,6 @@ function Signup() {
       alert(error.message)
     }
   }
-
-  const [phone, setPhone] = useState("")
 
   return (
     <div className="auth-container">
@@ -48,6 +48,51 @@ function Signup() {
           onChange={(e) => setPhone(e.target.value)}
           required
         />
+
+        <div className="role-toggle">
+          <button
+            type="button"
+            onClick={() => setShowRoles(!showRoles)}
+            className="toggle-button"
+          >
+            {showRoles ? "Hide Role Options ▲" : "Choose a Role ▼"}
+          </button>
+          {showRoles && (
+            <div className="role-selection">
+              <label>
+                <input
+                  type="radio"
+                  name="role"
+                  value="Pet Owner"
+                  checked={role === "Pet Owner"}
+                  onChange={() => setRole("Pet Owner")}
+                />
+                Pet Owner
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="role"
+                  value="Pet Seeker"
+                  checked={role === "Pet Seeker"}
+                  onChange={() => setRole("Pet Seeker")}
+                />
+                Pet Seeker
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="role"
+                  value="Admin"
+                  checked={role === "Admin"}
+                  onChange={() => setRole("Admin")}
+                />
+                Admin
+              </label>
+            </div>
+          )}
+        </div>
+
         <button type="submit">Sign Up</button>
       </form>
       <div className="auth-link">

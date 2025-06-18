@@ -1,0 +1,79 @@
+/* Base container */
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero section */
+.about-hero {
+  background: url("./images/allanimals.jpeg") center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Section titles */
+.about-container h2 {
+  font-size: 2rem;
+  color: #004aad;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Values list */
+.about-values ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-values li {
+  background: #f5f5f5;
+  border-left: 4px solid #004aad;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.about-values li:hover {
+  background: #e0f0ff;
+}
+
+/* Join section */
+.about-join {
+  background-color: #e9f8ff;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .about-container {
+    padding: 1rem;
+  }
+}
